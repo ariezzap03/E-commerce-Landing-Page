@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZapCart - Online Shopping</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    background:#f6f6f6;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#ff5722,#ff784e);
+    padding:15px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    color:white;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    margin-left:25px;
+    font-weight:500;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(90deg,#ff784e,#ff5722);
+    color:white;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.hero button{
+    padding:12px 30px;
+    border:none;
+    background:white;
+    color:#ff5722;
+    font-weight:bold;
+    border-radius:30px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#ffe5dd;
+}
+
+/* FLASH SALE */
+.flash-sale{
+    padding:40px 60px;
+}
+
+.flash-sale h2{
+    color:#ff5722;
+    margin-bottom:20px;
+}
+
+/* PRODUCT GRID */
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.product-card{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+    transition:0.3s;
+    position:relative;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+}
+
+.badge{
+    position:absolute;
+    top:10px;
+    left:10px;
+    background:#ff5722;
+    color:white;
+    padding:5px 8px;
+    font-size:12px;
+    border-radius:5px;
+}
+
+.product-card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+
+.product-card h3{
+    margin:10px 0;
+    font-size:16px;
+}
+
+.price{
+    color:#ff5722;
+    font-weight:bold;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+    font-size:14px;
+    margin-left:5px;
+}
+
+.product-card button{
+    margin-top:10px;
+    width:100%;
+    padding:8px;
+    border:none;
+    background:#ff5722;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.product-card button:hover{
+    background:#e64a19;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+    background:white;
+    padding:40px;
+    margin:40px 60px;
+    border-radius:10px;
+    text-align:center;
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+footer a{
+    color:#ff784e;
+    text-decoration:none;
+    margin:0 10px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        text-align:center;
+    }
+    nav{
+        margin-top:10px;
+    }
+    .hero h1{
+        font-size:30px;
+    }
+    .flash-sale{
+        padding:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🛍 ZapCart</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Flash Sale</a>
+        <a href="#">Categories</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Big Deals. Bigger Savings.</h1>
+    <p>Up to 70% OFF on selected items today!</p>
+    <button>Shop Now</button>
+</section>
+
+<section class="flash-sale">
+    <h2>🔥 Flash Sale</h2>
+    <div class="product-grid">
+
+        <div class="product-card">
+            <div class="badge">-50%</div>
+            <img src="image1.webp" alt="">
+            <h3>Wireless Earbuds</h3>
+            <p class="price">₱999 <span class="old-price">₱1,999</span></p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="badge">-30%</div>
+            <img src="image2.jpg" alt="">
+            <h3>Smart Watch Pro</h3>
+            <p class="price">₱2,299 <span class="old-price">₱3,299</span></p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="badge">-40%</div>
+            <img src="image3.jpg" alt="">
+            <h3>Gaming Keyboard RGB</h3>
+            <p class="price">₱1,499 <span class="old-price">₱2,499</span></p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="badge">-20%</div>
+            <img src="image4.jpg" alt="">
+            <h3>Portable Bluetooth Speaker</h3>
+            <p class="price">₱1,199 <span class="old-price">₱1,499</span></p>
+            <button>Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="testimonial">
+    <h2>⭐ Customer Feedback</h2>
+    <p>"Fast delivery and legit products! Highly recommended!"</p>
+    <p>"Best online shop experience ever!"</p>
+</section>
+
+<footer>
+    <p>📧 support@zapcart.com | 📱 0912-345-6789</p>
+    <p>
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">Twitter</a>
+    </p>
+    <p>
+        <a href="#">Terms & Conditions</a> |
+        <a href="#">Privacy Policy</a>
+    </p>
+</footer>
+
+</body>
+</html>
